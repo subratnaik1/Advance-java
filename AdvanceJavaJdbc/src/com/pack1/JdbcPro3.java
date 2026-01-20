@@ -124,8 +124,6 @@ public class JdbcPro3 {
 		}
 	}
 	
-	
-	
 void main() {
 	JdbcPro3 j3=new JdbcPro3();
 	//j3.viewDetails();
