@@ -1,4 +1,4 @@
-package com.pack1;
+package com.Jdbc.Lab;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,7 +32,6 @@ public class EmployeeInfo {
 		try {
 			IO.println("logging in");
 			Connection con=connect();
-			con.setAutoCommit(true);
 			PreparedStatement pstmt1=con.prepareStatement(q1);	
 			PreparedStatement pstmt2=con.prepareStatement(q2);	
 			PreparedStatement pstmt3=con.prepareStatement(q3);

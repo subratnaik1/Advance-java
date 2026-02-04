@@ -1,5 +1,4 @@
 package com.pack1;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -68,20 +67,19 @@ public class JdbcPro9 {
 					if (rs.next()) {
 						status = rs.getString(1);//fatches payment status from costomerpayment
 						if (status.equals("failed")) {//if fatches failed then
-							throw new RuntimeException("tranction failed");//throws runtime exception
+							throw new RuntimeException("tranction failed");//throws runtime exception.
 						} else {
-							PreparedStatement pstmt4 = con.prepareStatement(sqLQuery4);//else execute updates as confirmed
-							pstmt4.setString(1, "c123");//set costomer id
+							PreparedStatement pstmt4 = con.prepareStatement(sqLQuery4);//else execute updates as confirmed.
+							pstmt4.setString(1, "c123");//set costomer id.
 							int rowCount3 = pstmt4.executeUpdate();
-							if (rowCount3 == 0) {	//if no row updated
-								throw new RuntimeException("transaction failed at payment portal");//throws exception
+							if (rowCount3 == 0) {	//if no row updated.
+								throw new RuntimeException("transaction failed at payment portal");//throws exception.
 							} else {
-								IO.println("ticket successfully BOOKED");//else booked
+								IO.println("ticket successfully BOOKED");//else booked.
 								con.commit();
 							}
 						}
 					}
-
 					else {
 						IO.println("transaction failed");
 					}
@@ -92,7 +90,6 @@ public class JdbcPro9 {
 			e.printStackTrace();
 		}
 	}
-
 	void main() {
 		JdbcPro9 j9 = new JdbcPro9();
 		// j9.connect();
