@@ -12,8 +12,7 @@ public class JdbcLabPro1 {
 	String driver = "oracle.jdbc.OracleDriver";
 	String dbUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
 	String dbName = "subrat";
-	String dbPwd = "67890";
-    
+	String dbPwd = "67890";  
 	String q1="select * from emp";
 	String q2="select * from emp where age>25";
 	Connection connect() {
@@ -27,7 +26,6 @@ public class JdbcLabPro1 {
 		}
 		return con;
 	}
-
 	void m1() {
      Connection con=connect();
      try {
