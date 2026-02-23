@@ -13,7 +13,7 @@ public class AddEmpDAO {
 			pstmt.setInt(1, eb.getEmp_id());
 			pstmt.setString(2, eb.getName());
 			pstmt.setString(3, eb.getEmail());
-			pstmt.setInt(4, eb.getPhone());
+			pstmt.setLong(4, eb.getPhone());
 			pstmt.setString(5, eb.getDepartmant_id());
 			pstmt.setDouble(6, eb.getSalary());
 			pstmt.setString(7, eb.getStatus());

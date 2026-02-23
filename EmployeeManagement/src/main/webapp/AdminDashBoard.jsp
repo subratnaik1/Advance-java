@@ -63,7 +63,7 @@ body {
 <div class="sidebar">
     <div class="admin-name">Welcome, <%= adminName %></div>
     <a href="dashboard.jsp">Dashboard</a>
-    <a href="employeeList.jsp">View Employees</a>
+    <a href="viewEmployees">View Employees</a>
     <a href="addEmp.html">Add Employee</a>
     <a href="updateEmployee.jsp">Update Employee</a>
     <a href="deleteEmployee.jsp">Delete Employee</a>

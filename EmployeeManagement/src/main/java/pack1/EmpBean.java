@@ -4,7 +4,7 @@ public class EmpBean {
 private int emp_id;
 private String name;
 private String email;
-private int phone;
+private long phone;
 private String departmant_id;
 private double salary;
 private String status;
@@ -29,10 +29,10 @@ public String getEmail() {
 public void setEmail(String email) {
 	this.email = email;
 }
-public int getPhone() {
+public long getPhone() {
 	return phone;
 }
-public void setPhone(int phone) {
+public void setPhone(long phone) {
 	this.phone = phone;
 }
 public String getDepartmant_id() {
