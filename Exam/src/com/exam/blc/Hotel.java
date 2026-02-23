@@ -1,8 +1,6 @@
 package com.exam.blc;
 
-public class Hotel{
-	
-}
+public class Hotel{	
 public static double calculateTotalAmount(double roomRate, int days)
 {
 	 double am=0;

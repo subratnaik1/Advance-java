@@ -12,7 +12,7 @@ public class DBconnect {
 		
 		}
 		catch(Exception e) {
-			IO.println("error occured in db connect");
+			System.out.println("error occured in db connect");
 			e.printStackTrace();
 		}
 	}

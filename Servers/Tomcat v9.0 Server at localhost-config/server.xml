@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="8017" shutdown="SHUTDOWN">
+ --><Server port="8013" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -62,7 +62,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8086
     -->
-    <Connector connectionTimeout="20000" maxParameterCount="1000" port="8089" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" maxParameterCount="1000" port="8086" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -162,7 +162,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="App10" path="/App10" reloadable="true" source="org.eclipse.jst.jee.server:App10"/><Context docBase="OnlineElectronicPortal" path="/OnlineElectronicPortal" reloadable="true" source="org.eclipse.jst.jee.server:OnlineElectronicPortal"/><Context docBase="App9" path="/App9" reloadable="true" source="org.eclipse.jst.jee.server:App9"/><Context docBase="EmployeeManagement" path="/EmployeeManagement" reloadable="true" source="org.eclipse.jst.jee.server:EmployeeManagement"/></Host>
+      <Context docBase="EmployeeManagement" path="/EmployeeManagement" reloadable="true" source="org.eclipse.jst.jee.server:EmployeeManagement"/><Context docBase="App8" path="/App8" reloadable="true" source="org.eclipse.jst.jee.server:App8"/><Context docBase="OnlineElectronicPortal" path="/OnlineElectronicPortal" reloadable="true" source="org.eclipse.jst.jee.server:OnlineElectronicPortal"/></Host>
     </Engine>
   </Service>
 </Server>
