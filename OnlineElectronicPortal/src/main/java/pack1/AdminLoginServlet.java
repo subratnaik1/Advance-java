@@ -22,8 +22,8 @@ public class AdminLoginServlet extends HttpServlet {
 		
 		HttpSession session=req.getSession();
 		session.setAttribute("AdminBean", ab);
-		Cookie ck=new Cookie("ck1",ab.getA_fname());
-		res.addCookie(ck);
+		
+		
 		req.getRequestDispatcher("AdminHome.jsp").forward(req, res);	
 	}	
 	}
