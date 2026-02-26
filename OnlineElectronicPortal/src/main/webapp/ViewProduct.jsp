@@ -27,7 +27,7 @@
 				out.println(
 				    pb.getP_code() + " " + pb.getP_name() + " " + pb.getP_company() + " " + pb.getP_price() + " " + pb.getP_quantity()
 				    + " <a href='edit?pcode=" + pb.getP_code() + "'>Edit</a>"
-				    + " <a href='delete?pcode=" + pb.getP_code() + "'>Delete</a>"
+				    + " <a href='delete?pcode=" + pb.getP_code() + "'>Delete</a><br><br>"
 				);
 				
 			}
