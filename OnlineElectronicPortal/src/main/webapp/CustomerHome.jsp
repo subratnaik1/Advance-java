@@ -14,8 +14,8 @@
 			CustomerBean cb = (CustomerBean) session.getAttribute("customerBean");
 			out.println("welcome " + cb.getC_fname() + "<br><br>");
 			%>
-			<a href="view1">view products</a> <br><br>
-			<a href="Logout">logout</a>
+			<a href="view2">view products</a> <br><br>
+			<a href="Logout2">logout</a>
 		</h1>
 	</center>
 </body>

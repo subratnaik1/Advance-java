@@ -11,8 +11,7 @@
 <body>
 	<center>
 		<h1>
-			<%
-			
+			<%			
 			AdminBean ab = (AdminBean) session.getAttribute("AdminBean");
 			out.println("welcome " + ab.getA_fname() + "<br><br>");
 			%>
