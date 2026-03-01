@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ViewCustomerProductDAO {
 	public List<ProductBean> retriveCustomerData() {
-		List<ProductBean> list=new ArrayList<>();
+		List<ProductBean> cplist=new ArrayList<>();
     try {
     	Connection con=DBconnect.getCon();
     PreparedStatement pstmt=con.prepareStatement("select * from products");
@@ -21,12 +21,12 @@ public class ViewCustomerProductDAO {
     	cb.setP_company(rs.getString(3));
     	cb.setP_price(rs.getString(4));
     	cb.setP_quantity(rs.getString(5));   	
-    	list.add(cb);
+    	cplist.add(cb);
     }
     }
     catch(Exception e) {
     	e.printStackTrace();
     }
-	return list;	
+	return cplist;	
 	}
 }

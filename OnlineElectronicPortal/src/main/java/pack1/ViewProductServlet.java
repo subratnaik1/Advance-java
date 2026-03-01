@@ -17,8 +17,7 @@ public class ViewProductServlet extends HttpServlet {
     	   if(session==null) {
     		  throw new RuntimeException("SessionExpired"); 
     	   }
-    	   else {
-    		   
+    	   else {   		   
     			   ViewProductDAO vd= new ViewProductDAO ();
     			   ArrayList<ProductBean> al=vd.retriveProducts();
     			   HttpSession session2=req.getSession();
@@ -26,6 +25,5 @@ public class ViewProductServlet extends HttpServlet {
     			   req.getRequestDispatcher("ViewProduct.jsp").forward(req, res);  			   
     		   }
     		  	  
-    	   }
-       
+    	   }     
 }
