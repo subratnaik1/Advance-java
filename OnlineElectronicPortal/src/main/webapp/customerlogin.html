@@ -2,19 +2,102 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Customer Login</title>
+<style>
+    /* Full page gradient background */
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(120deg, #00c6ff, #0072ff, #00f2fe, #00c6ff);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    /* Login card */
+    .login-card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 40px 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 320px;
+    }
+
+    .login-card h1 {
+        margin-bottom: 30px;
+        font-size: 26px;
+        color: #0072ff;
+        letter-spacing: 1px;
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 1px solid #b0e0e6;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+
+    .login-card input[type="text"]:focus,
+    .login-card input[type="password"]:focus {
+        border-color: #00c6ff;
+        box-shadow: 0 0 8px #00c6ff;
+        outline: none;
+    }
+
+    .login-card input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .login-card input[type="submit"]:hover {
+        background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+
+    .login-card a {
+        display: inline-block;
+        margin-top: 15px;
+        color: #0072ff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .login-card a:hover {
+        color: #00c6ff;
+    }
+</style>
 </head>
 <body>
-	<center>
-		<h1>Customer login</h1>
-		<h1>
-		 <form action="clog" method="post">
-			<input type="text" name="c_name" ><br>
-			<br> <input type="password" name="c_pwd"><br>
-			<br> <input type="submit" value="Login"><br><br>
-			<a href="newcustomer.html">add new customer</a>
-			</form>
-		</h1>
-	</center>
+    <div class="login-card">
+        <h1>Customer Login</h1>
+        <form action="clog" method="post">
+            <input type="text" name="c_name" placeholder="Username" required><br>
+            <input type="password" name="c_pwd" placeholder="Password" required><br>
+            <input type="submit" value="Login"><br><br>
+            <a href="newcustomer.html">Add New Customer</a>
+        </form>
+    </div>
 </body>
 </html>

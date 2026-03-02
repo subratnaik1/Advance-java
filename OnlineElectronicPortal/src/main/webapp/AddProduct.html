@@ -2,21 +2,89 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Product Inventory</title>
+<style>
+    /* Full page sky blue gradient background */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom right, #87cefa, #00bfff);
+    }
+
+    /* Centered form container */
+    .form-container {
+        background: #ffffff;
+        border-radius: 25px;
+        padding: 40px 35px;
+        width: 380px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .form-container h1 {
+        margin-bottom: 30px;
+        font-size: 28px;
+        color: #0077b6;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #00bfff;
+        display: inline-block;
+        padding-bottom: 8px;
+    }
+
+    /* Input fields */
+    .form-container input[type="text"],
+    .form-container input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 1px solid #b0e0e6;
+        font-size: 16px;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+    }
+
+    .form-container input[type="text"]:focus,
+    .form-container input[type="number"]:focus {
+        border-color: #00bfff;
+        box-shadow: 0 0 8px #00bfff;
+        outline: none;
+    }
+
+    /* Submit button */
+    .form-container input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .form-container input[type="submit"]:hover {
+        background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+</style>
 </head>
 <body>
-	<center>
-		<h1>
-		<u>product inventry</u>
-		<form action="aps" method="post">
-		product code <input type="text" name="pcode"><br><br>
-		product name <input type="text" name="pname"><br><br>
-		product Company <input type="text" name="pcomp"><br><br>
-		product price <input type="text" name="pprice"><br><br>
-		product Quantity <input type="text" name="pqty"><br><br>
-		<input type="submit" value= "Add product">
-		</form>
-		</h1>
-	</center>
+    <div class="form-container">
+        <h1>Product Inventory</h1>
+        <form action="aps" method="post">
+            <input type="text" name="pcode" placeholder="Product Code" required>
+            <input type="text" name="pname" placeholder="Product Name" required>
+            <input type="text" name="pcomp" placeholder="Product Company" required>
+            <input type="text" name="pprice" placeholder="Product Price" required>
+            <input type="text" name="pqty" placeholder="Product Quantity" required>
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
 </body>
 </html>
