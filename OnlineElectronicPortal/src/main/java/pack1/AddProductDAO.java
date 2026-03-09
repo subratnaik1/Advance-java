@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 
 public class AddProductDAO {
 
-	public int insertProduct(ProductBean pb) {
+	public int insertProduct(ProductBean pb) throws Exception {
 		int rowCount=0;
 		try {
 			Connection con=DBconnect.getCon();
@@ -19,7 +19,8 @@ public class AddProductDAO {
 			rowCount=pstmt.executeUpdate();
 			
 		}catch(Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			throw e;
 		}
 		return rowCount;
 	}
